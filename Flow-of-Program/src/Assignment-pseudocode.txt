@@ -1,6 +1,7 @@
 Assignment:-
 1. - Input a year and find whether it is a leap year or not.
 Pseudocode - Start
+             initialize year
              input year
              if(year % 400 == 0) :
                 print ("Given Year is a Leap Year")
@@ -14,9 +15,10 @@ Pseudocode - Start
 
 2. - Take two numbers and print the sum of the both.
 Pseudocode - Start
+             initialize a, b, sum
              print ("Enter two numbers for addition")
              input a, b
-             sum = 0
+             set sum = 0
              sum = a + b
              print ("The sum of two numbers is - ")
              output sum
@@ -24,10 +26,11 @@ Pseudocode - Start
 
 3. - Take a number as an input and print the multiplication table for it.
 Pseudocode - Start
+             initialize num, c, sum
              print ("Enter the number for which you want to print the multiplication table of: ")
              input num
-             c = 1
-             sum = 0
+             set c = 1
+             set sum = 0
              while c <= 10
                 sum = num * c
                 println (num  + "x" + c + "=" + sum)
@@ -38,18 +41,36 @@ Pseudocode - Start
 
 4. - Take 2 numbers and inputs and find their HCF and LCM.
 Pseudocode - Start
-             print("Enter two numbers to find out their LCM and HCF")
+             initialize n1, n2, lcm, hcf
+             print ("Enter two numbers to find out their LCM and HCF")
              input n1,n2
              lcm = 0, hcf = 0
              lcm = (n1 > n2) ? n1 : n2
-             while (true) then
+             while (true):
                 if (lcm % n1 == 0 && lcm % n2 == 0) then
                    print ("The LCM of " + n1 + "and " + n2 + " is " + lcm)
-                              exit while
+               break while
              for(i = 0; i <= n1 && i <= n2; i+=1)
                 if(i % n1 == 0 && i % n2 == 0)
                    hcf = i
                    exit if
-                print ("The HCF of " + n1 + "and " + n2 + " is " = hcf
-                exit for
+                print ("The HCF of " + n1 + "and " + n2 + " is " + hcf)
+               exit for
+             exit
+
+5. - Keep taking numbers as inputs till the user enters ‘x’, after that print sum of all.
+Pseudocode - Start
+             initialize num, c, sum, m
+             print("Start entering numbers")
+             set sum=0
+             set c=0
+             while 1:
+                 num = int(input())
+                 c = c + 1
+                 sum = sum + num
+                 print("Press x when you are done inputting the numbers")
+                 m = input()
+                 if m == 'x' :
+                     break
+             print("Sum : ",sum)
              exit
