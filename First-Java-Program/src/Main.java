@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -44,6 +45,7 @@ public class Main {
 //        System.out.println("list of operations: +, -, *, /");
 //        System.out.print("Enter the operation you want to perform : ");
 //        operation = s.next().charAt(0);
+//
 //        if(operation == '+'){
 //            result = n1 + n2;
 //            System.out.println("The sum of the given two numbers is: " + result);
@@ -61,6 +63,92 @@ public class Main {
 //        }
 
 //  5. - Take 2 numbers as input and print the largest number.
+//        int n1,n2,res;
+//        Scanner s = new Scanner(System.in);
+//        System.out.print("Please Enter the First Number: ");
+//        n1 = s.nextInt();
+//        System.out.print("Please Enter the Second Number: ");
+//        n2 = s.nextInt();
+//        res = n1 > n2 ? n1 : n2;
+//        System.out.println("The Largest among this two numbers is: " + res);
 
+//  6. - Input currency in rupees and output in USD.
+//        double currency, res;
+//        Scanner s = new Scanner(System.in);
+//        System.out.print("Please Enter the Amount in Rupees: ");
+//        currency = s.nextDouble();
+//        res = currency * 0.013;
+//        System.out.print("Entered Amount after converting to USD: " + res);
+
+//  7. - To calculate Fibonacci Series up to n numbers.
+//        int i,c=0,n;
+//        Scanner s = new Scanner(System.in);
+//        System.out.print("Enter a number to generate fibonacci series till nth term: ");
+//        n=s.nextInt();
+//        int a=0;
+//        int b=1;
+//
+//        System.out.print("Fibonacci series till "+n+" is :- ");
+//        while(c<=n)
+//        {
+//            System.out.print(c+", ");
+//            a=b;
+//            b=c;
+//            c=a+b;
+//        }
+
+//  8. - To find out whether the given String is Palindrome or not.
+//        String rev = "", str;
+//        Scanner s = new Scanner(System.in);
+//        System.out.print("Please Enter the Text Word you want to check for Palindrome: ");
+//        str = s.next();
+//        str = str.toLowerCase();
+//
+//        for(int i = str.length() - 1; i >= 0; i--){
+//            rev = rev + str.charAt(i);
+//        }
+//
+//        if(str.equals(rev)){
+//            System.out.println("The Entered String is Palindrome.");
+//        } else {
+//            System.out.println("The Entered String is not a Palindrome.");
+//        }
+
+//  9. - To find Armstrong Number between two given number.
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter lower range : ");
+        int low = sc.nextInt();
+        System.out.print("Enter upper range : ");
+        int high = sc.nextInt();
+
+        System.out.println("Armstrong numbers between "+ low + " and " + high + " are : ");
+
+        for(int num = low ; num <= high ; num++)
+        {
+            int sum = 0, temp, digit, len;
+            len = getOrder(num);
+            temp = num;
+
+            while(temp != 0)
+            {
+                digit = temp % 10;
+                sum = sum + (int) Math.pow(digit,len);
+                temp /= 10;
+            }
+
+            if(sum == num)
+                System.out.print(num + " ");
+
+        }
+    }
+
+    private static int getOrder(int num) {
+        int len = 0;
+        while (num!=0)
+        {
+            len++;
+            num = num/10;
+        }
+        return len;
     }
 }
